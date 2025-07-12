@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/user', [UserController::class, 'store_user'])->name('user.store');
+
+Route::get('/user/{no_hp}', [UserController::class, 'get_guest_by_phone_number']);
+
 Route::get('/', function () {
     return view('index');
+});
+
+Route::get('/kepuasan', function () {
+    return view('kepuasan');
 });
