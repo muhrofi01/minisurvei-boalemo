@@ -25,3 +25,15 @@ Route::get('/', function () {
 Route::get('/kepuasan', function () {
     return view('kepuasan');
 });
+
+Route::get('/perasaan', function () {
+    return view('perasaan');
+});
+
+Route::get('/makna', function () {
+    return view('makna');
+});
+
+Route::get('/kebahagiaan', function () {
+    return view('kebahagiaan');
+});
