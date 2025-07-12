@@ -15,4 +15,12 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable, HasUuids;
 
     protected $guarded = ['id'];
+
+    /**
+     * Mendapatkan daftar isian_kuesioner
+     */
+    public function isian_kuesioner()
+    {
+        return $this->hasMany(IsianKuesioner::class);
+    }
 }

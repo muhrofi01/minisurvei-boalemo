@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
-    <title>Kepuasan Hidup</title>
+    <title>Makna Hidup</title>
 </head>
 <body class="bg-[#F7F9F2] dark:bg-slate-800">
 
@@ -75,16 +75,19 @@
         <div class="mt-10">
             <h6 class="text-2xl font-semibold dark:text-white">Makna Hidup (<i>Eudaimonia</i>)</h6>
 
-            <form action="{{ route('user.store') }}" method="POST" class="mt-10">
+            <form action="{{ route('makna.store') }}" method="POST" class="mt-10">
                 @csrf
                 
+                @if (session('user_id'))
+                    <input type="hidden" name="user_id" value="{{ session('user_id') }}">
+                @endif
                 {{-- Pertanyaan 1 --}}
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q1" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa mampu Anda menentukan keputusan bagi diri sendiri?</label>
                         <span id="range-value-q1" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
                     </div>
-                    <input id="steps-range-q1" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q1">
+                    <input name="makna_q1" id="steps-range-q1" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q1">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Mampu</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Mampu</span>
@@ -97,7 +100,7 @@
                         <label for="steps-range-q2" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa mampu Anda menciptakan kondisi yang nyaman bagi diri sendiri?</label>
                         <span id="range-value-q2" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
                     </div>
-                    <input id="steps-range-q2" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q2">
+                    <input name="makna_q2" id="steps-range-q2" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q2">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Mampu</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Mampu</span>
@@ -110,7 +113,7 @@
                         <label for="steps-range-q3" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa konsisten Anda dalam berupaya mengembangkan potensi diri (meningkatkan pengetahuan, keterampilan, relasi, dsb)?</label>
                         <span id="range-value-q3" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
                     </div>
-                    <input id="steps-range-q3" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q3">
+                    <input name="makna_q3" id="steps-range-q3" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q3">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Konsisten</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Konsisten</span>
@@ -123,7 +126,7 @@
                         <label for="steps-range-q4" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa bermanfaat Anda bagi orang lain?</label>
                         <span id="range-value-q4" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
                     </div>
-                    <input id="steps-range-q4" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q4">
+                    <input name="makna_q4" id="steps-range-q4" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q4">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Bermanfaat</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Bermanfaat</span>
@@ -136,7 +139,7 @@
                         <label for="steps-range-q5" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa optimis Anda dengan masa depan?</label>
                         <span id="range-value-q5" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
                     </div>
-                    <input id="steps-range-q5" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q5">
+                    <input name="makna_q5" id="steps-range-q5" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q5">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Optimis</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Optimis</span>
@@ -149,7 +152,7 @@
                         <label for="steps-range-q6" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa mampu Anda menerima apapun kondisi yang dialami?</label>
                         <span id="range-value-q6" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
                     </div>
-                    <input id="steps-range-q6" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q6">
+                    <input name="makna_q6" id="steps-range-q6" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q6">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Mampu</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Mampu</span>

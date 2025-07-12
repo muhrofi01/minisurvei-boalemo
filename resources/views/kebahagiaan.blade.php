@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
-    <title>Kepuasan Hidup</title>
+    <title>Kebahagiaan Hidup</title>
 </head>
 <body class="bg-[#F7F9F2] dark:bg-slate-800">
 
@@ -75,8 +75,12 @@
         <div class="mt-10">
             <h6 class="text-2xl font-semibold dark:text-white">Kebahagiaan Hidup</h6>
 
-            <form action="{{ route('user.store') }}" method="POST" class="mt-10">
+            <form action="{{ route('kebahagiaan.store') }}" method="POST" class="mt-10">
                 @csrf
+
+                @if (session('user_id'))
+                    <input type="hidden" name="user_id" value="{{ session('user_id') }}">
+                @endif
                 
                 {{-- Pertanyaan 1 --}}
                 <div class="mb-6">
@@ -84,7 +88,7 @@
                         <label for="steps-range-q1" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa Bahagia Anda dengan kehidupan secara keseluruhan?</label>
                         <span id="range-value-q1" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
                     </div>
-                    <input id="steps-range-q1" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q1">
+                    <input name="kebahagiaan_q1" id="steps-range-q1" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q1">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Bahagia</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Bahagia</span>
