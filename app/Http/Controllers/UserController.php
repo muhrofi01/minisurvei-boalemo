@@ -27,20 +27,41 @@ class UserController extends Controller
             $user->nomor_hp = $request->nomor_hp;
             $user->save();
 
-            $isianKuesioner = IsianKuesioner::where('user_id', $user->id)
-                                                ->where('status_kepuasan', '!=', 1)
-                                                ->where('status_perasaan', '!=', 1)
-                                                ->where('status_makna', '!=', 1)
-                                                ->where('status_kebahagiaan', '!=', 1)  
+            Session::put('user_id', $user->id);
+            
+            $belumIsianStatusKepuasan = IsianKuesioner::where('user_id', $user->id)
+                                                ->where('status_kepuasan', 0)  
                                                 ->first();
+            if ($belumIsianStatusKepuasan) {
+                return redirect('/kepuasan');
+            }
+            
+            $belumIsianStatusPerasaan = IsianKuesioner::where('user_id', $user->id)
+                                                ->where('status_perasaan', 0)  
+                                                ->first();
+            if ($belumIsianStatusPerasaan) {
+                return redirect('/perasaan');
+            }
 
-            if (!$isianKuesioner) {
+            $belumIsianStatusMaknaHidup = IsianKuesioner::where('user_id', $user->id)
+                                                ->where('status_makna', 0)  
+                                                ->first();
+            if ($belumIsianStatusMaknaHidup) {
+                return redirect('/makna');
+            }
+
+            $belumIsianStatusKebahagiaan = IsianKuesioner::where('user_id', $user->id)
+                                                ->where('status_kebahagiaan', 0)  
+                                                ->first();
+            if ($belumIsianStatusKebahagiaan) {
+                return redirect('/kebahagiaan');
+            }
+
+            if (!$belumIsianStatusKepuasan && !$belumIsianStatusPerasaan && !$belumIsianStatusMaknaHidup && !$belumIsianStatusKebahagiaan) {
                 $newIsianKuesioner = new IsianKuesioner();
                 $newIsianKuesioner->user_id = $user->id;
                 $newIsianKuesioner->save();
             }
-
-            Session::put('user_id', $user->id);
 
             return redirect('/kepuasan');
         } else {
@@ -54,20 +75,41 @@ class UserController extends Controller
             $newUserRecord->nomor_hp = $request->nomor_hp;
             $newUserRecord->save();
 
-            $isianKuesioner = IsianKuesioner::where('user_id', $newUserRecord->id)
-                                                ->where('status_kepuasan', '!=', 1)
-                                                ->where('status_perasaan', '!=', 1)
-                                                ->where('status_makna', '!=', 1)
-                                                ->where('status_kebahagiaan', '!=', 1)  
+            Session::put('user_id', $newUserRecord->id);
+            
+            $belumIsianStatusKepuasan = IsianKuesioner::where('user_id', $newUserRecord->id)
+                                                ->where('status_kepuasan', 0)  
                                                 ->first();
+            if ($belumIsianStatusKepuasan) {
+                return redirect('/kepuasan');
+            }
+            
+            $belumIsianStatusPerasaan = IsianKuesioner::where('user_id', $newUserRecord->id)
+                                                ->where('status_perasaan', 0)  
+                                                ->first();
+            if ($belumIsianStatusPerasaan) {
+                return redirect('/perasaan');
+            }
 
-            if (!$isianKuesioner) {
+            $belumIsianStatusMaknaHidup = IsianKuesioner::where('user_id', $newUserRecord->id)
+                                                ->where('status_makna', 0)  
+                                                ->first();
+            if ($belumIsianStatusMaknaHidup) {
+                return redirect('/makna');
+            }
+
+            $belumIsianStatusKebahagiaan = IsianKuesioner::where('user_id', $newUserRecord->id)
+                                                ->where('status_kebahagiaan', 0)  
+                                                ->first();
+            if ($belumIsianStatusKebahagiaan) {
+                return redirect('/kebahagiaan');
+            }
+
+            if (!$belumIsianStatusKepuasan && !$belumIsianStatusPerasaan && !$belumIsianStatusMaknaHidup && !$belumIsianStatusKebahagiaan) {
                 $newIsianKuesioner = new IsianKuesioner();
                 $newIsianKuesioner->user_id = $newUserRecord->id;
                 $newIsianKuesioner->save();
             }
-
-            Session::put('user_id', $newUserRecord->id);
 
             return redirect('/kepuasan');
         }
