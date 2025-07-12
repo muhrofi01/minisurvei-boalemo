@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('index');
 });
 Route::post('/user', [UserController::class, 'user_store'])->name('user.store');
-Route::get('/user/{no_hp}', [UserController::class, 'get_guest_by_phone_number']);
+// Route::get('/user/{no_hp}', [UserController::class, 'get_guest_by_phone_number']);
 
 Route::get('/kepuasan', function () {
     return view('kepuasan');
@@ -42,3 +42,5 @@ Route::get('/kebahagiaan', function () {
     return view('kebahagiaan');
 });
 Route::post('/kebahagiaan', [IsianKuesionerController::class, 'kebahagiaan_store'])->name('kebahagiaan.store');
+
+Route::get('/skor-hasil/{user_id}', [IsianKuesionerController::class, 'skor_hasil']);
