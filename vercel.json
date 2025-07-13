@@ -14,8 +14,9 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://minisurvei-boalemo.com",
-        "APP_KEY": "base64:TGaVaXwhWgjn9akhE4SCSIjGG/cQqvICUQ+PgLA3Bs0=",
+        "APP_URL": "",
+        "APP_KEY": "base64:maQaYjydPiktlrWjnNkg7TkkD6WF+8DYZGmLwk37AIA=",
+
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
@@ -25,6 +26,7 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
+
         "DB_CONNECTION": "mysql",
         "DB_HOST": "lvdbqh.h.filess.io",
         "DB_PORT": "61002",
