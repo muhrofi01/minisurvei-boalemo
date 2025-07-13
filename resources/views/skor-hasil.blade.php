@@ -25,17 +25,17 @@
         <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
 
             <div class="w-full p-6 text-center bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                {{-- <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $nilai_kepuasan_hidup }}</h5> --}}
+                <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $nilai_kepuasan_hidup }}</h5>
                 <p class="font-normal text-gray-700 dark:text-gray-400">Nilai Kepuasan Hidup</p>
             </div>
             
             <div class="w-full p-6 text-center bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                {{-- <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $nilai_perasaan }}</h5> --}}
+                <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $nilai_perasaan }}</h5>
                 <p class="font-normal text-gray-700 dark:text-gray-400">Nilai Perasaan</p>
             </div>
             
             <div class="w-full p-6 text-center bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                {{-- <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $nilai_makna_hidup }}</h5> --}}
+                <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $nilai_makna_hidup }}</h5>
                 <p class="font-normal text-gray-700 dark:text-gray-400">Nilai Makna Hidup</p>
             </div>
 
@@ -43,14 +43,14 @@
 
         <div class="mt-6">
             <div class="w-full p-6 text-center bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                {{-- <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $indeks_kebahagiaan }}</h5> --}}
+                <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $indeks_kebahagiaan }}</h5>
                 <p class="font-normal text-gray-700 dark:text-gray-400">Indeks Kebahagiaan</p>
             </div>
         </div>
 
         <div class="mt-6">
             <div class="w-full p-6 text-center bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                {{-- <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{ $teks_penjelas }}</h5> --}}
+                <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{ $teks_penjelas }}</h5>
             </div>
         </div>
 
