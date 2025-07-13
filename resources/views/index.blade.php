@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @vite('resources/css/app.css')
+    @if (env('APP_ENV') === 'local')
+        @vite('resources/css/app.css')
+    @elseif (env('APP_ENV') === 'production')
+        <link rel="stylesheet" href="{{ asset('build/assets/app-CyaRXJcN.css') }}">
+        <script src="{{ asset('build/assets/app-DNxiirP_.js') }}"></script>
+    @endif
     <title>Identitas</title>
 </head>
 <body class="bg-[#F7F9F2] dark:bg-slate-800">
