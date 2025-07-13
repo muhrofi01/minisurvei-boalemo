@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\IsianKuesioner;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class IsianKuesionerController extends Controller
@@ -118,8 +119,10 @@ class IsianKuesionerController extends Controller
         $isianKuesioner = IsianKuesioner::where('user_id', $user_id)
                                         ->latest('created_at')
                                         ->first();
-
         
+        $created_at = Carbon::parse($isianKuesioner->created_at)->setTimezone('Asia/Makassar');
+        $tanggal_mengisi = $created_at->translatedFormat('l, j F Y \● \P\u\k\u\l H.i') . ' WITA';
+
         $total_kepuasan_hidup = 0;
         $total_perasaan = 0;
         $total_makna_hidup = 0;
@@ -163,6 +166,7 @@ class IsianKuesionerController extends Controller
         }
 
         return view('skor-hasil', [
+            "tanggal_mengisi" => $tanggal_mengisi,
             "nilai_kepuasan_hidup" => number_format($nilai_kepuasan_hidup, 2, ',', ''),
             "nilai_perasaan" =>  number_format($nilai_perasaan, 2, ',', ''),
             "nilai_makna_hidup" =>  number_format($nilai_makna_hidup, 2, ',', ''),
