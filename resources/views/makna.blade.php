@@ -44,7 +44,7 @@
                     <div class="flex items-center justify-center w-5 h-5 me-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
                         3
                     </div>
-                    <div class="hidden sm:block">Perasaan</div>
+                    <div class="hidden sm:block">makna</div>
                     <div>
                         <svg class="w-3 h-3 mx-2 sm:ms-4 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 9 4-4-4-4M1 9l4-4-4-4"/>
@@ -85,9 +85,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q1" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa mampu Anda menentukan keputusan bagi diri sendiri?</label>
-                        <span id="range-value-q1" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q1" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->makna_q1 : "5" }}</span>
                     </div>
-                    <input name="makna_q1" id="steps-range-q1" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q1">
+                    <input name="makna_q1" value="{{ $isian_kuesioner ? $isian_kuesioner->makna_q1 : "" }}" id="steps-range-q1" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q1">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Mampu</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Mampu</span>
@@ -98,9 +98,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q2" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa mampu Anda menciptakan kondisi yang nyaman bagi diri sendiri?</label>
-                        <span id="range-value-q2" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q2" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->makna_q2 : "5" }}</span>
                     </div>
-                    <input name="makna_q2" id="steps-range-q2" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q2">
+                    <input name="makna_q2" value="{{ $isian_kuesioner ? $isian_kuesioner->makna_q2 : "" }}" id="steps-range-q2" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q2">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Mampu</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Mampu</span>
@@ -111,9 +111,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q3" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa konsisten Anda dalam berupaya mengembangkan potensi diri (meningkatkan pengetahuan, keterampilan, relasi, dsb)?</label>
-                        <span id="range-value-q3" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q3" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->makna_q3 : "5" }}</span>
                     </div>
-                    <input name="makna_q3" id="steps-range-q3" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q3">
+                    <input name="makna_q3" value="{{ $isian_kuesioner ? $isian_kuesioner->makna_q3 : "" }}" id="steps-range-q3" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q3">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Konsisten</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Konsisten</span>
@@ -124,9 +124,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q4" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa bermanfaat Anda bagi orang lain?</label>
-                        <span id="range-value-q4" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q4" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->makna_q4 : "5" }}</span>
                     </div>
-                    <input name="makna_q4" id="steps-range-q4" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q4">
+                    <input name="makna_q4" value="{{ $isian_kuesioner ? $isian_kuesioner->makna_q4 : "" }}" id="steps-range-q4" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q4">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Bermanfaat</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Bermanfaat</span>
@@ -137,9 +137,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q5" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa optimis Anda dengan masa depan?</label>
-                        <span id="range-value-q5" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q5" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->makna_q5 : "5" }}</span>
                     </div>
-                    <input name="makna_q5" id="steps-range-q5" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q5">
+                    <input name="makna_q5" value="{{ $isian_kuesioner ? $isian_kuesioner->makna_q5 : "" }}" id="steps-range-q5" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q5">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Optimis</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Optimis</span>
@@ -150,9 +150,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q6" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa mampu Anda menerima apapun kondisi yang dialami?</label>
-                        <span id="range-value-q6" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q6" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->makna_q6 : "5" }}</span>
                     </div>
-                    <input name="makna_q6" id="steps-range-q6" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q6">
+                    <input name="makna_q6" value="{{ $isian_kuesioner ? $isian_kuesioner->makna_q6 : "5" }}" id="steps-range-q6" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q6">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Mampu</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Mampu</span>
@@ -161,7 +161,7 @@
 
                 {{-- Button Simpan --}}
                 <div class="mt-6 flex justify-between">
-                    <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Kembali</button>
+                    <a href="{{ route('perasaan.get') }}" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Kembali</a>
                     <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Simpan</button>
                 </div>
             </form>

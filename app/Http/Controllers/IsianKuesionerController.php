@@ -7,11 +7,22 @@ use Illuminate\Http\Request;
 
 class IsianKuesionerController extends Controller
 {
+    public function kepuasan_get() 
+    {
+        $isian_kuesioner = IsianKuesioner::where('user_id', session('user_id'))
+                                        ->latest('created_at')
+                                        ->first();
+        return view('kepuasan', [
+            'isian_kuesioner' => $isian_kuesioner,
+        ]);
+    }
+
     public function kepuasan_store(Request $request) 
     {
-        $isianKuesioner = IsianKuesioner::where('user_id', $request->user_id)
-                                                ->where('status_kepuasan', 0)  
-                                                ->first();
+        $isianKuesioner = IsianKuesioner::where('user_id', session('user_id'))
+                                        ->latest('created_at')
+                                        ->first();
+                                        
         $isianKuesioner->status_kepuasan = 1;
         $isianKuesioner->kepuasan_q1 = $request->kepuasan_q1;
         $isianKuesioner->kepuasan_q2 = $request->kepuasan_q2;
@@ -27,12 +38,23 @@ class IsianKuesionerController extends Controller
 
         return redirect('/perasaan');
     }
+
+    public function perasaan_get() 
+    {
+        $isian_kuesioner = IsianKuesioner::where('user_id', session('user_id'))
+                                        ->latest('created_at')
+                                        ->first();
+        return view('perasaan', [
+            'isian_kuesioner' => $isian_kuesioner,
+        ]);
+    }
     
     public function perasaan_store(Request $request) 
     {
-        $isianKuesioner = IsianKuesioner::where('user_id', $request->user_id)
-                                                ->where('status_perasaan', 0)  
-                                                ->first();
+        $isianKuesioner = IsianKuesioner::where('user_id', session('user_id'))
+                                        ->latest('created_at')
+                                        ->first();
+                                        
         $isianKuesioner->status_perasaan = 1;
         $isianKuesioner->perasaan_q1 = $request->perasaan_q1;
         $isianKuesioner->perasaan_q2 = $request->perasaan_q2;
@@ -41,12 +63,22 @@ class IsianKuesionerController extends Controller
 
         return redirect('/makna');
     }
+
+    public function makna_get() 
+    {
+        $isian_kuesioner = IsianKuesioner::where('user_id', session('user_id'))
+                                        ->latest('created_at')
+                                        ->first();
+        return view('makna', [
+            'isian_kuesioner' => $isian_kuesioner,
+        ]);
+    }
     
     public function makna_store(Request $request) 
     {
-        $isianKuesioner = IsianKuesioner::where('user_id', $request->user_id)
-                                                ->where('status_makna', 0)  
-                                                ->first();
+        $isianKuesioner = IsianKuesioner::where('user_id', session('user_id'))
+                                        ->latest('created_at')
+                                        ->first();
         $isianKuesioner->status_makna = 1;
         $isianKuesioner->makna_q1 = $request->makna_q1;
         $isianKuesioner->makna_q2 = $request->makna_q2;
@@ -58,12 +90,22 @@ class IsianKuesionerController extends Controller
 
         return redirect('/kebahagiaan');
     }
+
+    public function kebahagiaan_get() 
+    {
+        $isian_kuesioner = IsianKuesioner::where('user_id', session('user_id'))
+                                        ->latest('created_at')
+                                        ->first();
+        return view('kebahagiaan', [
+            'isian_kuesioner' => $isian_kuesioner,
+        ]);
+    }
     
     public function kebahagiaan_store(Request $request) 
     {
-        $isianKuesioner = IsianKuesioner::where('user_id', $request->user_id)
-                                                ->where('status_kebahagiaan', 0)  
-                                                ->first();
+        $isianKuesioner = IsianKuesioner::where('user_id', session('user_id'))
+                                        ->latest('created_at')
+                                        ->first();
         $isianKuesioner->status_kebahagiaan = 1;
         $isianKuesioner->kebahagiaan_q1 = $request->kebahagiaan_q1;
         $isianKuesioner->save();

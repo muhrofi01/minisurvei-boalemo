@@ -86,9 +86,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q1" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa puas Anda dengan pendidikan dan keterampilan yang dimiliki?</label>
-                        <span id="range-value-q1" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q1" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q1 : "5" }}</span>
                     </div>
-                    <input name="kepuasan_q1" id="steps-range-q1" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q1">
+                    <input name="kepuasan_q1" value="{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q1 : "" }}"  id="steps-range-q1" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q1">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Puas</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Puas</span>
@@ -99,9 +99,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q2" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa puas Anda dengan pekerjaan/ usaha/kegiatan utama?</label>
-                        <span id="range-value-q2" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q2" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q2 : "5" }}</span>
                     </div>
-                    <input name="kepuasan_q2" id="steps-range-q2" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q2">
+                    <input name="kepuasan_q2" value="{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q2 : "" }}"  id="steps-range-q2" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q2">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Puas</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Puas</span>
@@ -112,9 +112,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q3" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa puas Anda dengan pendapatan rumah tangga?</label>
-                        <span id="range-value-q3" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q3" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q3 : "5" }}</span>
                     </div>
-                    <input name="kepuasan_q3" id="steps-range-q3" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q3">
+                    <input name="kepuasan_q3" value="{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q3 : "" }}"  id="steps-range-q3" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q3">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Puas</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Puas</span>
@@ -125,9 +125,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q4" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa puas Anda dengan kesehatan?</label>
-                        <span id="range-value-q4" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q4" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q4 : "5" }}</span>
                     </div>
-                    <input name="kepuasan_q4" id="steps-range-q4" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q4">
+                    <input name="kepuasan_q4" value="{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q4 : "" }}"  id="steps-range-q4" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q4">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Puas</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Puas</span>
@@ -138,9 +138,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q5" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa puas Anda dengan keharmonisan keluarga?</label>
-                        <span id="range-value-q5" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q5" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q5 : "5" }}</span>
                     </div>
-                    <input name="kepuasan_q5" id="steps-range-q5" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q5">
+                    <input name="kepuasan_q5" value="{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q5 : "" }}"  id="steps-range-q5" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q5">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Puas</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Puas</span>
@@ -151,9 +151,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q6" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa puas Anda dengan ketersediaan waktu luang?</label>
-                        <span id="range-value-q6" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q6" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q6 : "5" }}</span>
                     </div>
-                    <input name="kepuasan_q6" id="steps-range-q6" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q6">
+                    <input name="kepuasan_q6" value="{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q6 : "" }}"  id="steps-range-q6" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q6">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Puas</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Puas</span>
@@ -164,9 +164,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q7" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa puas Anda dengan hubungan sosial terhadap warga di lingkungan sekitar tempat tinggal?</label>
-                        <span id="range-value-q7" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q7" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q7 : "5" }}</span>
                     </div>
-                    <input name="kepuasan_q7" id="steps-range-q7" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q7">
+                    <input name="kepuasan_q7" value="{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q7 : "" }}"  id="steps-range-q7" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q7">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Puas</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Puas</span>
@@ -177,9 +177,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q8" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa puas Anda dengan keadaan lingkungan?</label>
-                        <span id="range-value-q8" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q8" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q8 : "5" }}</span>
                     </div>
-                    <input name="kepuasan_q8" id="steps-range-q8" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q8">
+                    <input name="kepuasan_q8" value="{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q8 : "" }}"  id="steps-range-q8" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q8">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Puas</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Puas</span>
@@ -190,9 +190,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q9" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa puas Anda dengan kondisi keamanan?</label>
-                        <span id="range-value-q9" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q9" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q9 : "5" }}</span>
                     </div>
-                    <input name="kepuasan_q9" id="steps-range-q9" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q9">
+                    <input name="kepuasan_q9" value="{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q9 : "" }}"  id="steps-range-q9" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q9">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Puas</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Puas</span>
@@ -203,9 +203,9 @@
                 <div class="mb-6">
                     <div class="flex justify-between">
                         <label for="steps-range-q10" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Seberapa puas Anda dengan rumah dan fasilitas rumah?</label>
-                        <span id="range-value-q10" class="text-sm font-medium text-gray-900 dark:text-white">5</span>
+                        <span id="range-value-q10" class="text-sm font-medium text-gray-900 dark:text-white">{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q10 : "5" }}</span>
                     </div>
-                    <input name="kepuasan_q10" id="steps-range-q10" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q10">
+                    <input name="kepuasan_q10" value="{{ $isian_kuesioner ? $isian_kuesioner->kepuasan_q10 : "" }}"  id="steps-range-q10" type="range" min="1" max="10" value="5" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" data-value-id="range-value-q10">
                     <div class="flex justify-between">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Tidak Puas</span>
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Sangat Puas</span>
@@ -214,7 +214,7 @@
 
                 {{-- Button Simpan --}}
                 <div class="mt-6 flex justify-between">
-                    <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Kembali</button>
+                    <a href="{{ route('user.get') }}" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Kembali</a>
                     <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Simpan</button>
                 </div>
             </form>

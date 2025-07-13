@@ -80,13 +80,13 @@
                 {{-- Email --}}
                 <div class="mb-4">
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                    <input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                    <input type="email" id="email" value="{{ $user ? $user->email : "" }}" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                 </div> 
 
                 {{-- Nama --}}
                 <div class="mb-4">
                     <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
-                    <input type="text" id="nama" name="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                    <input type="text" id="nama" value="{{ $user ? $user->nama : "" }}" name="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                 </div>
 
                 {{-- Jenis Kelamin --}}
@@ -94,11 +94,11 @@
                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jenis Kelamin</label>
                     <div class="w-full grid grid-cols-1 sm:grid-cols-2">
                         <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700 has-[:checked]:bg-sky-200">
-                            <input id="bordered-radio-1" type="radio" value="Laki-laki" name="jenis_kelamin" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <input id="bordered-radio-1" type="radio" value="Laki-laki" {{ ($user ? ($user->jenis_kelamin == "Laki-laki" ? "checked" : "") : "") }} name="jenis_kelamin" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                             <label for="bordered-radio-1" class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Laki-laki</label>
                         </div>
                         <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700 has-[:checked]:bg-pink-200">
-                            <input id="bordered-radio-2" type="radio" value="Perempuan" name="jenis_kelamin" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <input id="bordered-radio-2" type="radio" value="Perempuan" {{ ($user ? ($user->jenis_kelamin == "Perempuan" ? "checked" : "") : "") }} name="jenis_kelamin" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                             <label for="bordered-radio-2" class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Perempuan</label>
                         </div>    
                     </div> 
@@ -107,7 +107,7 @@
                 {{-- Umur --}}
                 <div class="mb-4">
                     <label for="umur" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Umur</label>
-                    <input type="number" id="umur" name="umur" min="1" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                    <input type="number" id="umur" value="{{ $user ? $user->umur : "" }}" name="umur" min="1" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                 </div>
 
                 {{-- Status Perkawinan --}}
@@ -115,10 +115,10 @@
                     <label for="status_perkawinan" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status Perkawinan</label>
                     <select name="status_perkawinan" id="status_perkawinan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option selected disabled></option>
-                        <option value="Belum Kawin">Belum Kawin</option>
-                        <option value="Kawin">Kawin</option>
-                        <option value="Cerai Hidup">Cerai Hidup</option>
-                        <option value="Cerai Mati">Cerai Mati</option>
+                        <option value="Belum Kawin" {{ ($user ? ($user->status_perkawinan == "Belum Kawin" ? "selected" : "") : "") }}>Belum Kawin</option>
+                        <option value="Kawin" {{ ($user ? ($user->status_perkawinan == "Kawin" ? "selected" : "") : "") }}>Kawin</option>
+                        <option value="Cerai Hidup" {{ ($user ? ($user->status_perkawinan == "Cerai Hidup" ? "selected" : "") : "") }}>Cerai Hidup</option>
+                        <option value="Cerai Mati" {{ ($user ? ($user->status_perkawinan == "Cerai Mati" ? "selected" : "") : "") }}>Cerai Mati</option>
                     </select>
                 </div>
 
@@ -127,20 +127,20 @@
                     <label for="pendidikan_terakhir" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pendidikan Tertinggi</label>
                     <select name="pendidikan_tertinggi" id="pendidikan_terakhir" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option selected disabled></option>
-                        <option value="SD/MI/Sederajat">SD/MI/Sederajat</option>
-                        <option value="SMP/MTs/Sederajat">SMP/MTs/Sederajat</option>
-                        <option value="SMA/K/MA/K/Sederajat">SMA/K/MA/K/Sederajat</option>
-                        <option value="D1/D2/D3">D1/D2/D3</option>
-                        <option value="D4/S1">D4/S1</option>
-                        <option value="S2">S2</option>
-                        <option value="S3">S3</option>
+                        <option value="SD/MI/Sederajat" {{ ($user ? ($user->pendidikan_tertinggi == "SD/MI/Sederajat" ? "selected" : "") : "") }}>SD/MI/Sederajat</option>
+                        <option value="SMP/MTs/Sederajat" {{ ($user ? ($user->pendidikan_tertinggi == "SMP/MTs/Sederajat" ? "selected" : "") : "") }}>SMP/MTs/Sederajat</option>
+                        <option value="SMA/K/MA/K/Sederajat" {{ ($user ? ($user->pendidikan_tertinggi == "SMA/K/MA/K/Sederajat" ? "selected" : "") : "") }}>SMA/K/MA/K/Sederajat</option>
+                        <option value="D1/D2/D3" {{ ($user ? ($user->pendidikan_tertinggi == "D1/D2/D3" ? "selected" : "") : "") }}>D1/D2/D3</option>
+                        <option value="D4/S1" {{ ($user ? ($user->pendidikan_tertinggi == "D4/S1" ? "selected" : "") : "") }}>D4/S1</option>
+                        <option value="S2" {{ ($user ? ($user->pendidikan_tertinggi == "S2" ? "selected" : "") : "") }}>S2</option>
+                        <option value="S3" {{ ($user ? ($user->pendidikan_tertinggi == "S3" ? "selected" : "") : "") }}>S3</option>
                     </select>
                 </div>
 
                 {{-- Nomor HP --}}
                 <div class="mb-4">
                     <label for="nomor_hp" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nomor HP</label>
-                    <input type="text" id="nomor_hp" name="nomor_hp" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"required />
+                    <input type="text" id="nomor_hp" value="{{ $user ? $user->nomor_hp : "" }}" name="nomor_hp" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"required />
                 </div>
                 
                 {{-- Button Simpan --}}

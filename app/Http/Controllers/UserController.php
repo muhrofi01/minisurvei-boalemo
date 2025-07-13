@@ -10,6 +10,15 @@ use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
+    public function user_get()
+    {
+        $user = User::find(session('user_id'));
+
+        return view('index', [
+            'user' => $user,
+        ]);
+    }
+    
     public function user_store(StoreUserRequest $request) 
     {
         $request->validated();
