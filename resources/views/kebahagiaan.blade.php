@@ -9,8 +9,7 @@
     @elseif (env('APP_ENV') === 'production')
         <link rel="stylesheet" href="{{ asset('build/assets/app-CyaRXJcN.css') }}">
         <script src="{{ asset('build/assets/app-DNxiirP_.js') }}"></script>
-    
-        @endif
+    @endif
     <title>Kebahagiaan Hidup</title>
 </head>
 <body class="bg-[#F7F9F2] dark:bg-slate-800">
