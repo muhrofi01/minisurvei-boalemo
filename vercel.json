@@ -30,8 +30,8 @@
         "DB_CONNECTION": "mysql",
         "DB_HOST": "lvdbqh.h.filess.io",
         "DB_PORT": "61002",
-        "DB_DATABASE": "minisurvei_nicegentle",
-        "DB_USERNAME": "minisurvei_nicegentle",
+        "DB_DATABASE": "indeks_kebahagiaan_rollfearif",
+        "DB_USERNAME": "indeks_kebahagiaan_rollfearif",
         "DB_PASSWORD": "b6a28ed31b571991335bc94f66432572481f668e"
     }
 }
