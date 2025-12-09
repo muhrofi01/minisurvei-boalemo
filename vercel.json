@@ -2,7 +2,7 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/index.php": { "runtime": "vercel-php@0.6.2" }
     },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/" },
@@ -28,10 +28,10 @@
         "SESSION_DRIVER": "cookie",
 
         "DB_CONNECTION": "mysql",
-        "DB_HOST": "lvdbqh.h.filess.io",
+        "DB_HOST": "ltr8ie.h.filess.io",
         "DB_PORT": "61002",
         "DB_DATABASE": "indeks_kebahagiaan_rollfearif",
         "DB_USERNAME": "indeks_kebahagiaan_rollfearif",
-        "DB_PASSWORD": "b6a28ed31b571991335bc94f66432572481f668e"
+        "DB_PASSWORD": "994be482eaf2e3c0c49eebd09b942d99307a37b1"
     }
 }
