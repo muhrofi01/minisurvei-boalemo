@@ -7,7 +7,7 @@
     @if (env('APP_ENV') === 'local')
         @vite('resources/css/app.css')
     @elseif (env('APP_ENV') === 'production')
-        <link rel="stylesheet" href="{{ asset('build/assets/app-CyaRXJcN.css') }}">
+        <link rel="stylesheet" href="{{ asset('build/assets/app-B_QA9weI.css') }}">
         <script src="{{ asset('build/assets/app-DNxiirP_.js') }}"></script>
     @endif
     <title>Makna Hidup</title>
@@ -17,14 +17,14 @@
     {{-- Progress --}}
     <div class="py-16 px-4 sm:px-12 md:px-20 lg:px-60">
         <div class="text-center">
-            <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-4xl lg:text-5xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Seberapa</span> bahagiakah kamu?</h1>
+            <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-4xl lg:text-5xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-[#febd26] from-[#f79039]">Seberapa</span> bahagiakah kamu?</h1>
             <p class="text-xl font-normal text-gray-500 lg:text-xl dark:text-gray-400">Yuk ukur Indeks Kebahagiaanmu, hanya 5 menit!</p>    
         </div>
 
         <div class="mt-10">
             <ol class="flex items-center justify-center w-fit mx-auto p-3 space-x-2 text-sm font-medium text-center text-gray-500 bg-white border border-gray-200 rounded-lg shadow-xs dark:text-gray-400 sm:text-base dark:bg-gray-800 dark:border-gray-700 sm:p-4 sm:space-x-4 rtl:space-x-reverse">
-                <li class="flex items-center text-blue-600 dark:text-blue-500">
-                    <div class="flex items-center justify-center w-5 h-5 me-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+                <li class="flex items-center text-[#f79039]">
+                    <div class="flex items-center justify-center w-5 h-5 me-2 text-xs border bor-[#f79039] rounded-full shrink-0 ">
                         1
                     </div>
                     <div class="hidden sm:block">Identitas</div>
@@ -34,8 +34,8 @@
                         </svg>
                     </div>
                 </li>
-                <li class="flex items-center text-blue-600 dark:text-blue-500">
-                    <div class="flex items-center justify-center w-5 h-5 me-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+                <li class="flex items-center text-[#f79039]">
+                    <div class="flex items-center justify-center w-5 h-5 me-2 text-xs border bor-[#f79039] rounded-full shrink-0 ">
                         2
                     </div>
                     <div class="hidden sm:block">Kepuasan Hidup</div>
@@ -45,8 +45,8 @@
                         </svg>
                     </div>
                 </li>
-                <li class="flex items-center text-blue-600 dark:text-blue-500">
-                    <div class="flex items-center justify-center w-5 h-5 me-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+                <li class="flex items-center text-[#f79039]">
+                    <div class="flex items-center justify-center w-5 h-5 me-2 text-xs border bor-[#f79039] rounded-full shrink-0 ">
                         3
                     </div>
                     <div class="hidden sm:block">makna</div>
@@ -56,8 +56,8 @@
                         </svg>
                     </div>
                 </li>
-                <li class="flex items-center text-blue-600 dark:text-blue-500">
-                    <div class="flex items-center justify-center w-5 h-5 me-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+                <li class="flex items-center text-[#f79039]">
+                    <div class="flex items-center justify-center w-5 h-5 me-2 text-xs border bor-[#f79039] rounded-full shrink-0 ">
                         4
                     </div>
                     <div class="hidden sm:block">Makna Hidup</div>
@@ -167,7 +167,7 @@
                 {{-- Button Simpan --}}
                 <div class="mt-6 flex justify-between">
                     <a href="{{ route('perasaan.get') }}" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Kembali</a>
-                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Simpan</button>
+                    <button type="submit" class="text-white bg-[#f79039] hover:bg-[#f79039]/80 focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-[#f79039] dark:hover:bg-[#f79039] focus:outline-none ">Simpan</button>
                 </div>
             </form>
         </div>
