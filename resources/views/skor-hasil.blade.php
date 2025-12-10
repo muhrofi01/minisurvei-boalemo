@@ -18,7 +18,7 @@
     <div class="py-16 px-4 sm:px-12 md:px-20 lg:px-60">
         
         <div class="text-center">
-            <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-4xl lg:text-5xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Cek Level</span> Bahagiamu!</h1>
+            <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-4xl lg:text-5xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-[#ffcd07] from-[#f79039]">Cek Level</span> Bahagiamu!</h1>
             <p class="text-xl font-normal text-gray-500 dark:text-gray-400">Lihat Seberapa Ceria Hidupmu dari Pilihanmu!</p> 
             <p class="text-base font-normal text-gray-400 dark:text-gray-300">{{ $tanggal_mengisi }}</p>       
         </div>
