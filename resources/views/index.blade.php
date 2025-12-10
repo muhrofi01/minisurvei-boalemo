@@ -12,18 +12,18 @@
     @endif
     <title>Identitas</title>
 </head>
-<body class="bg-[#F7F9F2] dark:bg-slate-800">
+<body class="bg-[#f8f8f8] dark:bg-slate-800">
 
     {{-- Progress --}}
     <div class="py-16 px-4 sm:px-12 md:px-20 lg:px-60">
         <div class="text-center">
-            <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-4xl lg:text-5xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Seberapa</span> bahagiakah kamu?</h1>
+            <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-4xl lg:text-5xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-[#ffcd07] from-[#f79039]">Seberapa</span> bahagiakah kamu?</h1>
             <p class="text-xl font-normal text-gray-500 lg:text-xl dark:text-gray-400">Yuk ukur Indeks Kebahagiaanmu, hanya 5 menit!</p>    
         </div>
 
         <div class="mt-10">
             <ol class="flex items-center justify-center w-fit mx-auto p-3 space-x-2 text-sm font-medium text-center text-gray-500 bg-white border border-gray-200 rounded-lg shadow-xs dark:text-gray-400 sm:text-base dark:bg-gray-800 dark:border-gray-700 sm:p-4 sm:space-x-4 rtl:space-x-reverse">
-                <li class="flex items-center text-blue-600 dark:text-blue-500">
+                <li class="flex items-center text-[#f79039]">
                     <div class="flex items-center justify-center w-5 h-5 me-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
                         1
                     </div>
@@ -99,11 +99,11 @@
                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jenis Kelamin</label>
                     <div class="w-full grid grid-cols-1 sm:grid-cols-2">
                         <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700 has-[:checked]:bg-sky-200">
-                            <input id="bordered-radio-1" type="radio" value="Laki-laki" {{ ($user ? ($user->jenis_kelamin == "Laki-laki" ? "checked" : "") : "") }} name="jenis_kelamin" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <input id="bordered-radio-1" type="radio" value="Laki-laki" {{ ($user ? ($user->jenis_kelamin == "Laki-laki" ? "checked" : "") : "") }} name="jenis_kelamin" class="w-4 h-4 text-[#f79039]bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                             <label for="bordered-radio-1" class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Laki-laki</label>
                         </div>
                         <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700 has-[:checked]:bg-pink-200">
-                            <input id="bordered-radio-2" type="radio" value="Perempuan" {{ ($user ? ($user->jenis_kelamin == "Perempuan" ? "checked" : "") : "") }} name="jenis_kelamin" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <input id="bordered-radio-2" type="radio" value="Perempuan" {{ ($user ? ($user->jenis_kelamin == "Perempuan" ? "checked" : "") : "") }} name="jenis_kelamin" class="w-4 h-4 text-[#f79039]bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                             <label for="bordered-radio-2" class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Perempuan</label>
                         </div>    
                     </div> 
@@ -150,7 +150,7 @@
                 
                 {{-- Button Simpan --}}
                 <div class="mt-6 flex justify-end">
-                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Simpan</button>
+                    <button type="submit" class="text-white bg-[#f79039] hover:bg-[#f79039]/80 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">Simpan</button>
                 </div>
             </form>
         </div>
