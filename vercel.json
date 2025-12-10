@@ -32,6 +32,7 @@
         "DB_PORT": "61002",
         "DB_DATABASE": "indeks_kebahagiaan_rollfearif",
         "DB_USERNAME": "indeks_kebahagiaan_rollfearif",
-        "DB_PASSWORD": "994be482eaf2e3c0c49eebd09b942d99307a37b1"
+        "DB_PASSWORD": "994be482eaf2e3c0c49eebd09b942d99307a37b1",
+        "VERCEL_FORCE_NO_BUILD_CACHE": 1
     }
 }
