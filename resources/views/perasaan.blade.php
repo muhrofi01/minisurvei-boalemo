@@ -7,7 +7,7 @@
     @if (env('APP_ENV') === 'local')
         @vite('resources/css/app.css')
     @elseif (env('APP_ENV') === 'production')
-        <link rel="stylesheet" href="{{ asset('build/assets/app-B_QA9weI.css') }}">
+        <link rel="stylesheet" href="{{ asset('build/assets/app-D55oTcZ5.css') }}">
         <script src="{{ asset('build/assets/app-DNxiirP_.js') }}"></script>
     @endif
     <title>Perasaan</title>
