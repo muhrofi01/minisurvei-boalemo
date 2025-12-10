@@ -12,7 +12,7 @@
     @endif
     <title>Identitas</title>
 </head>
-<body class="bg-[#f8f8f8] dark:bg-slate-800">
+<body class="bg-[#F9F9F9] dark:bg-slate-800">
 
     {{-- Progress --}}
     <div class="py-16 px-4 sm:px-12 md:px-20 lg:px-60">
